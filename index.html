@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>We are eager for you to join EasyAdvocacy!</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Open+Sans:wght@400;500;600;700&family=Raleway:wght@800&display=swap"
+        rel="stylesheet" />
+
+    <style>
+        /* RESET */
+        *,
+        *::before,
+        *::after {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* PAGE BACKGROUND */
+        body {
+            background-color: #edf0f7;
+            font-family: "Open Sans", Arial, sans-serif;
+            color: #555555;
+            padding: 40px 16px;
+            margin: 0;
+        }
+
+        /* WRAPPER */
+        .ew {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* EMAIL CARD */
+        .ec {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        /* ─── HEADER ─── */
+        .eh {
+            padding: 11px 10px 9px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+
+
+        /* WHITE LOGO PILL */
+        .logo-pill {
+            display: inline-block;
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 0px 24px;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 18px;
+        }
+
+        .logo-pill img {
+            width: 185px;
+            height: 54px;
+            object-fit: contain;
+            display: block;
+        }
+
+        /* badge */
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 7px;
+            background: rgba(65, 105, 225, 0.08);
+            border: 1px solid rgba(65, 105, 225, 0.30);
+            border-radius: 50px;
+            padding: 6px 18px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .badge-txt {
+            color: #000000;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 1.6px;
+            text-transform: uppercase;
+        }
+
+        /* THIN ACCENT LINE */
+        .abar {
+            height: 3px;
+            background: linear-gradient(90deg, #4169E1 0%, #0fe0ba 50%, #0b82c6 100%);
+            /* border-bottom: 3px solid #0b82c6; */
+
+        }
+
+        /* ─── BODY ─── */
+        .eb {
+            padding: 38px 44px 32px;
+            text-align: center;
+        }
+
+        /* label */
+        .tag {
+            display: inline-block;
+            background: #eef1fd;
+            color: #4169E1;
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 4px;
+            margin-bottom: 18px;
+        }
+
+        /* heading */
+        .head {
+            font-family: "Raleway", "Montserrat", Arial, sans-serif;
+            font-size: 24px;
+            font-weight: 800;
+            color: #1a1d2e;
+            line-height: 1.35;
+            margin-bottom: 10px;
+        }
+
+        .head span {
+            color: #0b82c6;
+        }
+
+        /* divider line */
+        .div-line {
+            width: 44px;
+            height: 3px;
+            background: #0b82c6;
+            border-radius: 2px;
+            margin: auto;
+            margin-bottom: 22px;
+        }
+
+        /* body text */
+        .para {
+            font-size: 14.5px;
+            color: #6b7280;
+            line-height: 1.85;
+            margin-bottom: 28px;
+        }
+
+        .para .lawyer-name {
+            color: #0b82c6;
+            font-weight: 700;
+        }
+
+        .para .brand {
+            color: #1a1d2e;
+            font-weight: 700;
+        }
+
+        /* ─── OTP SECTION (no boxes, clean numbers) ─── */
+        .otp-section {
+            background: #f7f9ff;
+            border-radius: 10px;
+            padding: 26px 20px 20px;
+            text-align: center;
+            margin-bottom: 24px;
+            border-top: 3px solid #0b82c6;
+        }
+
+        .otp-lbl {
+            font-size: 11px;
+            font-weight: 700;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 16px;
+        }
+
+        /* OTP digits — large, spaced, no individual boxes */
+        .otp-digits {
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 32px;
+            font-weight: 800;
+            color: #0b82c6;
+            letter-spacing: 20px;
+            margin-bottom: 14px;
+            line-height: 1;
+        }
+
+        .otp-valid {
+            font-size: 12px;
+            color: #9ca3af;
+        }
+
+        .otp-valid strong {
+            color: #0b82c6;
+            font-weight: 700;
+        }
+
+        /* ─── WARNING BOX ─── */
+        .warn {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+            background: #fffbee;
+            border-left: 4px solid #f5a623;
+            border-radius: 6px;
+            padding: 14px 16px;
+            margin-bottom: 28px;
+        }
+
+        .warn-ico {
+            font-size: 17px;
+            flex-shrink: 0;
+            margin-top: 1px;
+            line-height: 1;
+        }
+
+        .warn-txt {
+            font-size: 13px;
+            color: #7a5c00;
+            line-height: 1.72;
+        }
+
+        .warn-txt strong {
+            color: #b37a00;
+        }
+
+        /* ─── CTA BUTTON ─── */
+        .btn-wrap {
+            text-align: center;
+            margin-bottom: 26px;
+        }
+
+        .cta {
+            display: inline-block;
+            background: #0b82c6;
+            color: #ffffff !important;
+            text-decoration: none;
+            padding: 13px 42px;
+            border-radius: 6px;
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 13.5px;
+            font-weight: 700;
+            letter-spacing: 0.4px;
+            box-shadow: 0 4px 14px rgba(65, 105, 225, 0.30);
+        }
+
+        /* ignore note */
+        .note {
+            font-size: 12.5px;
+            color: #9ca3af;
+            text-align: center;
+            line-height: 1.75;
+        }
+
+        .note a {
+            color: #4169E1;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        /* ─── FOOTER ─── */
+        .ef {
+            background: #424242;
+            padding: 26px 30px;
+            text-align: center;
+        }
+
+        .ef-brand {
+            margin-bottom: 14px;
+        }
+
+        .ef-brand img {
+            width: 160px;
+            height: 48px;
+            object-fit: contain;
+            background: transparent;
+            border-radius: 8px;
+            padding: 6px 16px;
+            display: inline-block;
+        }
+
+        .ef-links {
+            margin-bottom: 14px;
+        }
+
+        .ef-links a {
+            color: #9ca3af;
+            text-decoration: none;
+            font-size: 11.5px;
+            font-weight: 600;
+            padding: 0 11px;
+            border-right: 1px solid #3a3d48;
+            line-height: 1;
+        }
+
+        .ef-links a:last-child {
+            border-right: none;
+        }
+
+        .ef-copy {
+            font-size: 11px;
+            color: #6b7280;
+            line-height: 1.85;
+        }
+
+        .ef-copy a {
+            color: #0b82c6;
+            text-decoration: none;
+        }
+
+        .ef-line {
+            width: 36px;
+            height: 2px;
+            background: linear-gradient(90deg, #4169E1, #0fe0ba);
+            border-radius: 2px;
+            margin: 16px auto 0;
+        }
+
+        /* ─── RESPONSIVE ─── */
+        @media screen and (max-width: 600px) {
+
+            body {
+                padding: 20px 10px;
+            }
+
+            .eb {
+                padding: 28px 20px 24px;
+                text-align: center;
+            }
+
+            .head {
+                font-size: 20px;
+            }
+
+            .logo-pill img {
+                width: 150px;
+                height: 46px;
+            }
+
+            .otp-digits {
+                font-size: 40px;
+                letter-spacing: 14px;
+            }
+
+            .ef {
+                padding: 22px 18px;
+            }
+
+            .cta {
+                padding: 12px 30px;
+                font-size: 13px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="ew">
+        <div class="ec">
+
+            <!-- HEADER -->
+            <div class="eh">
+
+                <div class="logo-pill">
+                    <img src="img-fol/image.png" alt="EasyAdvocacy" />
+                </div>
+
+                <br />
+
+                <div class="badge">
+                    <span class="badge-dot"></span>
+                    <span class="badge-txt">Email Verification</span>
+                </div>
+
+            </div>
+
+            <!-- accent line -->
+            <div class="abar"></div>
+
+            <!-- BODY -->
+            <div class="eb">
+
+                <div class="tag">&#128274; Secure OTP Code</div>
+
+                <h1 class="head">
+                    We are eager for you<br />
+                    to join <span>EasyAdvocacy!</span>
+                </h1>
+
+                <div class="div-line"></div>
+
+                <p class="para">
+                    Dear <span class="lawyer-name">Adv. Chitra Sharma</span>,
+                    <br /><br />
+                    Thank you for registering on
+                    <span class="brand">EasyAdvocacy</span> — India's trusted platform
+                    connecting advocates with clients. To complete your account setup,
+                    please use the one-time verification code below.
+                </p>
+
+                <!-- OTP — clean large digits, no boxes -->
+                <div class="otp-section">
+                    <div class="otp-lbl">Your One-Time Password (OTP)</div>
+                    <div class="otp-digits">4&nbsp;8&nbsp;2&nbsp;7</div>
+                    <p class="otp-valid">
+                        This code is valid for <strong>10 minutes</strong> only.
+                    </p>
+                </div>
+
+                <!-- WARNING -->
+                <!-- <div class="warn">
+                    <span class="warn-ico">&#9888;&#65039;</span>
+                    <p class="warn-txt">
+                        <strong>Important Security Notice:</strong> Never share this OTP
+                        with anyone — including EasyAdvocacy staff. This code expires in
+                        <strong>10 minutes</strong>. If you did not initiate this request,
+                        please ignore this email immediately.
+                    </p>
+                </div> -->
+
+                <!-- BUTTON -->
+                <div class="btn-wrap">
+                    <a href="#" class="cta">Verify My Account &rarr;</a>
+                </div>
+
+                <p class="note">
+                    Didn't request this? Simply ignore this email or&nbsp;
+                    <a href="mailto:info@easyadvocacy.com">contact our support</a>.
+                </p>
+
+            </div><!-- /body -->
+
+            <!-- FOOTER -->
+            <div class="ef">
+
+                <!-- <div class="ef-brand">
+                    <img src="image.png" alt="EasyAdvocacy" />
+                </div> -->
+
+                <div class="ef-links">
+                    <a href="#">Find Lawyer</a>
+                    <a href="#">Legal Help</a>
+                    <a href="#">Templates</a>
+                    <a href="#">Contact</a>
+                </div>
+
+                <p class="ef-copy">
+                    &copy; 2026 EasyAdvocacy. All Rights Reserved.
+                    <br />
+                    <a href="mailto:info@easyadvocacy.com">info@easyadvocacy.com</a>
+                    &nbsp;&middot;&nbsp; <a href="https://easyadvocacy.com/">easyadvocacy.com</a>
+                </p>
+
+                <div class="ef-line"></div>
+
+            </div><!-- /footer -->
+
+        </div><!-- /card -->
+    </div><!-- /wrapper -->
+
+</body>
+
+</html>
