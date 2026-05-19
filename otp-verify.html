@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>We are eager for you to join EasyAdvocacy!</title>
+    <title>Verify Your EasyAdvocacy Account</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -99,7 +99,6 @@
             text-align: center;
         }
 
-        /* label */
         /* heading */
         .head {
             font-family: "Raleway", "Montserrat", Arial, sans-serif;
@@ -142,7 +141,7 @@
             font-weight: 700;
         }
 
-        /* ─── OTP SECTION (no boxes, clean numbers) ─── */
+        /* ─── OTP SECTION — 6 individual digit boxes ─── */
         .otp-section {
             background: #f7f9ff;
             border-radius: 10px;
@@ -158,18 +157,32 @@
             color: #9ca3af;
             text-transform: uppercase;
             letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        /* 6 individual digit boxes */
+        .otp-boxes {
+            display: inline-flex;
+            gap: 10px;
+            justify-content: center;
             margin-bottom: 16px;
         }
 
-        /* OTP digits — large, spaced, no individual boxes */
-        .otp-digits {
+        .otp-box {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 52px;
+            height: 60px;
+            background: #ffffff;
+            border: 2px dashed #0b82c6;
+            border-radius: 8px;
             font-family: "Montserrat", Arial, sans-serif;
-            font-size: 32px;
-            font-weight: 800;
-            color: #0b82c6;
-            letter-spacing: 20px;
-            margin-bottom: 14px;
-            line-height: 1;
+            font-size: 10px;
+            font-weight: 700;
+            color: #9ca3af;
+            letter-spacing: 0;
+            box-shadow: 0 2px 8px rgba(11, 130, 198, 0.12);
         }
 
         .otp-valid {
@@ -324,9 +337,15 @@
                 height: 46px;
             }
 
-            .otp-digits {
-                font-size: 40px;
-                letter-spacing: 14px;
+            .otp-boxes {
+                gap: 7px;
+            }
+
+            .otp-box {
+                width: 42px;
+                height: 50px;
+                font-size: 9px;
+                border-radius: 6px;
             }
 
             .ef {
@@ -379,10 +398,17 @@
                     please use the one-time verification code below.
                 </p>
 
-                <!-- OTP — clean large digits, no boxes -->
+                <!-- OTP — 6 individual digit boxes -->
                 <div class="otp-section">
                     <div class="otp-lbl">Your One-Time Password (OTP)</div>
-                    <div class="otp-digits">{{otp}}</div>
+                    <div class="otp-boxes">
+                        <span class="otp-box">{{otp_1}}</span>
+                        <span class="otp-box">{{otp_2}}</span>
+                        <span class="otp-box">{{otp_3}}</span>
+                        <span class="otp-box">{{otp_4}}</span>
+                        <span class="otp-box">{{otp_5}}</span>
+                        <span class="otp-box">{{otp_6}}</span>
+                    </div>
                     <p class="otp-valid">
                         This code is valid for <strong>10 minutes</strong> only.
                     </p>
@@ -426,7 +452,7 @@
                 </div>
 
                 <p class="ef-copy">
-                    &copy; 2026 EasyAdvocacy. All Rights Reserved.
+                    &copy; {{year}} EasyAdvocacy. All Rights Reserved.
                     <br />
                     <a href="mailto:info@easyadvocacy.com">info@easyadvocacy.com</a>
                     &nbsp;&middot;&nbsp; <a href="https://easyadvocacy.com/">easyadvocacy.com</a>

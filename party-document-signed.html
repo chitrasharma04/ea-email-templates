@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>We are eager for you to join EasyAdvocacy!</title>
+    <title>Document Signed</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -37,9 +37,9 @@
 
         /* PAGE BACKGROUND */
         body {
-            background-color: #edf0f7;
-            font-family: "Open Sans", Arial, sans-serif;
-            color: #555555;
+            background-color: var(--bg-color);
+            font-family: var(--font-primary);
+            color: var(--text-color);
             padding: 40px 16px;
             margin: 0;
         }
@@ -65,8 +65,6 @@
             overflow: hidden;
         }
 
-
-
         /* WHITE LOGO PILL */
         .logo-pill {
             display: inline-block;
@@ -89,8 +87,6 @@
         .abar {
             height: 1px;
             background: 1px#84888848;
-            /* border-bottom: 3px solid #0b82c6; */
-
         }
 
         /* ─── BODY ─── */
@@ -99,7 +95,6 @@
             text-align: center;
         }
 
-        /* label */
         /* heading */
         .head {
             font-family: "Raleway", "Montserrat", Arial, sans-serif;
@@ -142,73 +137,60 @@
             font-weight: 700;
         }
 
-        /* ─── OTP SECTION (no boxes, clean numbers) ─── */
-        .otp-section {
+        /* ─── INFO BOX ─── */
+        .info-box {
             background: #f7f9ff;
             border-radius: 10px;
-            padding: 26px 20px 20px;
-            text-align: center;
-            margin-bottom: 24px;
+            padding: 26px 28px 22px;
+            text-align: left;
+            margin-bottom: 28px;
             border-top: 3px solid #0b82c6;
         }
 
-        .otp-lbl {
+        .info-lbl {
             font-size: 11px;
             font-weight: 700;
             color: #9ca3af;
             text-transform: uppercase;
             letter-spacing: 2px;
-            margin-bottom: 16px;
+            margin-bottom: 18px;
+            text-align: center;
         }
 
-        /* OTP digits — large, spaced, no individual boxes */
-        .otp-digits {
-            font-family: "Montserrat", Arial, sans-serif;
-            font-size: 32px;
-            font-weight: 800;
-            color: #0b82c6;
-            letter-spacing: 20px;
-            margin-bottom: 14px;
-            line-height: 1;
-        }
-
-        .otp-valid {
-            font-size: 12px;
-            color: #9ca3af;
-        }
-
-        .otp-valid strong {
-            color: #0b82c6;
-            font-weight: 700;
-        }
-
-        /* ─── WARNING BOX ─── */
-        .warn {
+        .info-row {
             display: flex;
-            align-items: flex-start;
-            gap: 11px;
-            background: #fffbee;
-            border-left: 4px solid #f5a623;
-            border-radius: 6px;
-            padding: 14px 16px;
-            margin-bottom: 28px;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
         }
 
-        .warn-ico {
-            font-size: 17px;
+        .info-row:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .info-key {
+            font-size: 12px;
+            font-weight: 700;
+            color: #9ca3af;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
             flex-shrink: 0;
-            margin-top: 1px;
-            line-height: 1;
+            margin-right: 12px;
         }
 
-        .warn-txt {
-            font-size: 13px;
-            color: #7a5c00;
-            line-height: 1.72;
+        .info-val {
+            font-family: "Montserrat", Arial, sans-serif;
+            font-size: 14px;
+            font-weight: 800;
+            color: #1a1d2e;
+            word-break: break-all;
+            text-align: right;
         }
 
-        .warn-txt strong {
-            color: #b37a00;
+        .info-val.highlight {
+            color: #0b82c6;
         }
 
         /* ─── CTA BUTTON ─── */
@@ -250,20 +232,6 @@
             background: #424242;
             padding: 26px 30px;
             text-align: center;
-        }
-
-        .ef-brand {
-            margin-bottom: 14px;
-        }
-
-        .ef-brand img {
-            width: 160px;
-            height: 48px;
-            object-fit: contain;
-            background: transparent;
-            border-radius: 8px;
-            padding: 6px 16px;
-            display: inline-block;
         }
 
         .ef-links {
@@ -324,9 +292,18 @@
                 height: 46px;
             }
 
-            .otp-digits {
-                font-size: 40px;
-                letter-spacing: 14px;
+            .info-box {
+                padding: 20px 16px 16px;
+            }
+
+            .info-row {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 4px;
+            }
+
+            .info-val {
+                text-align: left;
             }
 
             .ef {
@@ -348,13 +325,9 @@
 
             <!-- HEADER -->
             <div class="eh">
-
                 <div class="logo-pill">
                     <img src="img-fol/image.png" alt="EasyAdvocacy" />
                 </div>
-
-
-
             </div>
 
             <!-- accent line -->
@@ -364,59 +337,34 @@
             <div class="eb">
 
                 <h1 class="head">
-                    We are eager for you<br />
-                    to join <span>EasyAdvocacy!</span>
+                    Document<br />
+                    <span>Signed</span>
                 </h1>
 
                 <div class="div-line"></div>
 
                 <p class="para">
-                    Dear <span class="lawyer-name">{{lawyer_name}}</span>,
+                    Hello,
                     <br /><br />
-                    Thank you for registering on
-                    <span class="brand">EasyAdvocacy</span> — India's trusted platform
-                    connecting advocates with clients. To complete your account setup,
-                    please use the one-time verification code below.
+                    This is a notification that <strong>{{party_name}}</strong> has successfully signed the document
+                    <strong style="color: #1a1d2e;">{{document_name}}</strong> on <span
+                        class="brand">EasyAdvocacy</span>.
                 </p>
-
-                <!-- OTP — clean large digits, no boxes -->
-                <div class="otp-section">
-                    <div class="otp-lbl">Your One-Time Password (OTP)</div>
-                    <div class="otp-digits">{{otp}}</div>
-                    <p class="otp-valid">
-                        This code is valid for <strong>10 minutes</strong> only.
-                    </p>
-                </div>
-
-                <!-- WARNING -->
-                <!-- <div class="warn">
-                    <span class="warn-ico">&#9888;&#65039;</span>
-                    <p class="warn-txt">
-                        <strong>Important Security Notice:</strong> Never share this OTP
-                        with anyone — including EasyAdvocacy staff. This code expires in
-                        <strong>10 minutes</strong>. If you did not initiate this request,
-                        please ignore this email immediately.
-                    </p>
-                </div> -->
 
                 <!-- BUTTON -->
                 <div class="btn-wrap">
-                    <a href="#" class="cta">Verify My Account &rarr;</a>
+                    <a href="https://easyadvocacy.com/" class="cta">View Document Status &rarr;</a>
                 </div>
 
                 <p class="note">
-                    Didn't request this? Simply ignore this email or&nbsp;
-                    <a href="mailto:info@easyadvocacy.com">contact our support</a>.
+                    You can view the full progress of this document in your dashboard.<br />
+                    Need help? <a href="mailto:info@easyadvocacy.com">Contact our support team</a>.
                 </p>
 
             </div><!-- /body -->
 
             <!-- FOOTER -->
             <div class="ef">
-
-                <!-- <div class="ef-brand">
-                    <img src="image.png" alt="EasyAdvocacy" />
-                </div> -->
 
                 <div class="ef-links">
                     <a href="https://easyadvocacy.com/lawyers">Find Lawyer</a>
@@ -426,7 +374,7 @@
                 </div>
 
                 <p class="ef-copy">
-                    &copy; 2026 EasyAdvocacy. All Rights Reserved.
+                    &copy; {{year}} EasyAdvocacy. All Rights Reserved.
                     <br />
                     <a href="mailto:info@easyadvocacy.com">info@easyadvocacy.com</a>
                     &nbsp;&middot;&nbsp; <a href="https://easyadvocacy.com/">easyadvocacy.com</a>
